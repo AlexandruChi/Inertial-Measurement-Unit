@@ -34,7 +34,7 @@
 #define scale_lsb_2000dps 0.06097560975
 
 #define Temp_Sensitivity 333.87
-#define RoomTemp_Offset 20
+#define RoomTemp_Offset 0
 
 #define TEMP_degC(X) ((((X) - RoomTemp_Offset) / Temp_Sensitivity) + 21)
 
