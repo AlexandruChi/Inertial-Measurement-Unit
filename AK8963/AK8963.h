@@ -4,7 +4,7 @@
 #ifndef AK8963_H
 #define AK8963_H
 
-#define AK8963_ADDRESS
+#define AK8963_ADDRESS 0x0C
 
 /* https://invensense.tdk.com/wp-content/uploads/2017/11/RM-MPU-9250A-00-v1.6.pdf */
 
@@ -36,6 +36,15 @@
 
 /* I2C disable */
 #define I2CDIS 15
+
+/* X-axis sensitivity adjustment value */
+#define ASAX 16
+
+/* Y-axis sensitivity adjustment value */
+#define ASAY 17
+
+/* Z-axis sensitivity adjustment value */
+#define ASAZ 18
 
 #endif /* AK8963_H */
 

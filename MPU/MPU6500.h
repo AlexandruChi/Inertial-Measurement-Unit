@@ -1,13 +1,16 @@
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "OCUnusedMacroInspection"
 
-#ifndef MPU9250_H
-#define MPU9250_H
+/* MPU6500 */
 
-#define MPU9250_ADDRESS     0x68 /* INT = GND */
-#define MPU9250_ADDRESS_2   0x69 /* INT = VDD */
+#ifndef MPU_H
+#define MPU_H
 
-/* https://invensense.tdk.com/wp-content/uploads/2017/11/RM-MPU-9250A-00-v1.6.pdf */
+#define MPU_ADDRESS     0x68 /* INT = GND */
+#define MPU_ADDRESS_2   0x69 /* INT = VDD */
+
+#define SAMPLING_RATE_GYROSCOPE_DEFAULT 8000
+#define SAMPLING_RATE_ACCELEROMETER_DEFAULT 1000
 
 // convert g to lsb
 #define scale_2g_lsb 16384
@@ -92,7 +95,16 @@
 #define WOM_THR 31
 
 /* FIFO Enable */
-#define FIFO_EN 32
+#define FIFO_EN 35
+
+#define TEMP_OUT 7
+#define GYRO_XOUT 6
+#define GYRO_YOUT 5
+#define GYRO_ZOUT 4
+#define ACCEL 3
+#define SLV_2 2
+#define SLV_1 1
+#define SLV_0 0
 
 /* I2C Master Control */
 #define I2C_MST_CTRL 36
@@ -129,6 +141,14 @@
 
 /* INT Pin / Bypass Enable Configuration */
 #define INT_PIN_CFG 55
+
+#define ACTL 7
+#define OPEN 6
+#define LATCH_INT_EN 5
+#define INT_ANYRD_2CLEAR 4
+#define ACTL_FSYNC 3
+#define FSYNC_INT_MODE_EN 2
+#define BYPASS_EN 1
 
 /* Interrupt Enable */
 #define INT_ENABLE 56
@@ -243,6 +263,6 @@
 #define ZA_OFFSET_H 125
 #define ZA_OFFSET_L 126
 
-#endif /* MPU9250_H */
+#endif /* MPU_H */
 
 #pragma clang diagnostic pop

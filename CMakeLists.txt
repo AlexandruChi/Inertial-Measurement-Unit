@@ -26,9 +26,9 @@ pico_sdk_init()
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(InertialMeasurementUnit InertialMeasurementUnit.c
-        MPU6050/MPU6050.h
-        MPU9250/MPU9250.h
-        MPU9250/MPU9250.h
+        MPU/MPU6050.h
+        MPU/MPU6500.h
+        MPU/MPU6500.h
         AK8963/AK8963.h
         BMP180/BMP180.h
         BMP180/BMP180.h

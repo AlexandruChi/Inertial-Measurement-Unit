@@ -417,10 +417,10 @@
 		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/InertialMeasurementUnit.c">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/MPU6050/MPU6050.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/MPU/MPU6050.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/MPU9250/MPU9250.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/MPU/MPU6500.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
 		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/i2c.c">

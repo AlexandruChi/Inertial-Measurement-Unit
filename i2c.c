@@ -13,12 +13,32 @@ uint i2c_set_up(i2c_inst_t *i2c, uint scl, uint sda, uint baudrate) {
     return realBaudrate;
 }
 
-void i2c_set_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t val) {
+bool i2c_set_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t val) {
     uint8_t buffer[2] = {reg, val};
-    i2c_write_blocking(i2c, addr, buffer, 2, false);
+    if (i2c_write_blocking(i2c, addr, buffer, 2, false) == PICO_ERROR_GENERIC) {
+        return false;
+    }
+    return true;
 }
 
-void i2c_read_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t *val) {
-    i2c_write_blocking(i2c, addr, &reg, 1, true);
-    i2c_read_blocking(i2c, addr, val, 1, false);
+bool i2c_read_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t *val) {
+    if (
+            i2c_write_blocking(i2c, addr, &reg, 1, true) == PICO_ERROR_GENERIC ||
+            i2c_read_blocking(i2c, addr, val, 1, false) == PICO_ERROR_GENERIC
+    ) {
+        return false;
+    }
+    return true;
+}
+
+uint i2c_scan(i2c_inst_t *i2c, uint8_t *addr) {
+    uint8_t i = 0, val;
+
+    for (uint8_t x = 0; x < 1 << 7; x++) {
+        if (i2c_read_blocking(i2c, x, &val, 1, false) != PICO_ERROR_GENERIC) {
+            addr[i++] = x;
+        }
+    }
+
+    return i;
 }

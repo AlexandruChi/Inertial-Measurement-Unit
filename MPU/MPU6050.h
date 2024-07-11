@@ -1,13 +1,12 @@
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "OCUnusedMacroInspection"
 
-#ifndef MPU6050_H
-#define MPU6050_H
+/* MPU */
+#ifndef MPU_H
+#define MPU_H
 
-#define MPU6050_ADDRESS     0x68 /* INT = GND */
-#define MPU6050_ADDRESS_2   0x69 /* INT = VDD */
-
-/* https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf */
+#define MPU_ADDRESS     0x68 /* INT = GND */
+#define MPU_ADDRESS_2   0x69 /* INT = VDD */
 
 /* Self Test Registers */
 #define SELF_TEST_X 13
@@ -180,6 +179,6 @@
 /* Who Am I */
 #define WHO_AM_I 117
 
-#endif /* MPU6050_H */
+#endif /* MPU_H */
 
 #pragma clang diagnostic pop

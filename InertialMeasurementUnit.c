@@ -2,17 +2,24 @@
 #include "pico/stdlib.h"
 #include "pico/cyw43_arch.h"
 
-#include "MPU9250/MPU9250.h"
+#include "MPU/MPU6500.h"
+#include "AK8963/AK8963.h"
+
 #include "i2c.h"
 #include "units.h"
 
 #define loop while(1)
 
-void mpu9250SetUp(i2c_inst_t *i2c, uint8_t addr);
-void getMpu9250Data(i2c_inst_t *i2c, uint8_t addr, void *data);
+#define BAUDRATE kHz(400)
+
+void mpu6500Start(i2c_dev_t device);
+void mpu6500SetScale(i2c_dev_t device);
+void mpu6500GetCurrentData(i2c_dev_t device, void *data);
+
+void ak8963Start(i2c_dev_t device);
 
 int main() {
-    if (stdio_init_all()) {
+    if (!stdio_init_all()) {
         printf("stdio init failed");
         return -1;
     }
@@ -22,53 +29,72 @@ int main() {
         return -1;
     }
 
-    i2c_set_up(PICO_DEFAULT_I2C_INSTANCE, PICO_DEFAULT_I2C_SCL_PIN, PICO_DEFAULT_I2C_SDA_PIN, kHz(400));
+    uint baudrate = i2c_set_up(PICO_DEFAULT_I2C_INSTANCE, PICO_DEFAULT_I2C_SCL_PIN, PICO_DEFAULT_I2C_SDA_PIN, BAUDRATE);
+    if (baudrate != BAUDRATE) {
+        printf("baudrate set to %u instead of %u", baudrate, BAUDRATE);
+    }
 
-    mpu9250SetUp(PICO_DEFAULT_I2C_INSTANCE, MPU9250_ADDRESS);
+    i2c_dev_t mpu9250 = {PICO_DEFAULT_I2C_INSTANCE, MPU_ADDRESS};
 
-    int16_t data[7];
+    mpu6500Start(mpu9250);
+
+    int8_t data[14];
 
     double acceleration[3];
-    double temperature;
     double rotation[3];
 
     loop {
-        sleep_ms(500);
+        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
 
-        getMpu9250Data(PICO_DEFAULT_I2C_INSTANCE, MPU9250_ADDRESS, data);
-
-        for (uint8_t i = 0; i < 3; i++) {
-            acceleration[i] = scale_2g_lsb * data[i];
-        }
-
-        temperature = TEMP_degC(data[3]);
+        mpu6500GetCurrentData(mpu9250, data);
 
         for (uint8_t i = 0; i < 3; i++) {
-            rotation[i] = scale_250dps_lsb * data[i + 4];
+            acceleration[i] = scale_lsb_2g * ((data[i * 2] << 8) + data[i * 2 + 1]);
         }
 
-        if (!printf("acc => x: %10.3lf y: %10.3lf z: %10.3lf\nrot => x: %10.3lf y: %10.3lf z: %10.3lf\ntem => t: %10.3lf\n\n", acceleration[0], acceleration[1], acceleration[2], rotation[0], rotation[1], rotation[2], temperature)) {
+        for (uint8_t i = 0; i < 3; i++) {
+            rotation[i] = scale_lsb_250dps * ((data[(i + 4) * 2] << 8) + data[(i + 4) * 2 + 1]);
+        }
+
+        if (!printf("acc => x: %7.2lf\ty: %7.2lf\tz: %7.2lf\nrot => x: %7.2lf\ty: %7.2lf\tz: %7.2lf\n\n", acceleration[0], acceleration[1], acceleration[2], rotation[0], rotation[1], rotation[2])) {
             break;
         }
+
+        cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
+        sleep_ms(1000);
     }
 
     return 0;
 }
 
-void mpu9250SetUp(i2c_inst_t *i2c, uint8_t addr) {
+void mpu6500Start(i2c_dev_t device) {
     /* Reset device
      * DEVICE_RESET = 1 */
-    i2c_set_register(i2c, addr, PWR_MGMT_1, 1 << H_RESET);
+    i2c_set_register(device.i2c, device.addr, PWR_MGMT_1, 1 << H_RESET);
     sleep_ms(100);
 
-    /* Wake up device
-     * SLEEP = 0 */
-    i2c_set_register(i2c, addr, PWR_MGMT_1, 0);
+    /* Wake up device and disable temperature
+     * SLEEP = 0
+     * PD_PTAT = 1 */
+    i2c_set_register(device.i2c, device.addr, PWR_MGMT_1, 1 << PD_PTAT);
+    sleep_ms(100);
+
+    /* Enable FIFO
+     * GYRO_XOUT = 1
+     * GYRO_YOUT = 1
+     * GYRO_ZOUT = 1
+     * ACCEL = 1 */
+    i2c_set_register(device.i2c, device.addr, FIFO_EN, 1 << GYRO_XOUT | 1 << GYRO_YOUT | 1 << GYRO_ZOUT | 1 << ACCEL);
     sleep_ms(100);
 }
 
-void getMpu9250Data(i2c_inst_t *i2c, uint8_t addr, void *data) {
+void mpu6500GetCurrentData(i2c_dev_t device, void *data) {
     uint8_t reg = ACCEL_XOUT_H;
-    i2c_write_blocking(i2c, addr, &reg, 1, true);
-    i2c_read_blocking(i2c, addr, data, 14, false);
+    i2c_write_blocking(device.i2c, device.addr, &reg, 1, true);
+    i2c_read_blocking(device.i2c, device.addr, data, 14, false);
+}
+
+void ak8963Start(i2c_dev_t device) {
+    i2c_set_register(device.i2c, device.addr, CNTL, 2);
+    sleep_ms(100);
 }
