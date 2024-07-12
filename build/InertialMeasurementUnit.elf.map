@@ -113,8 +113,6 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/InertialMeasurementUnit.dir/i2c/i2c.c.obj
  .text.i2c_read_register
                 0x00000000       0x44 CMakeFiles/InertialMeasurementUnit.dir/i2c/i2c.c.obj
- .text.i2c_rw_read_register
-                0x00000000       0x3c CMakeFiles/InertialMeasurementUnit.dir/i2c/i2c.c.obj
  .text          0x00000000        0x0 CMakeFiles/InertialMeasurementUnit.dir/BMP180/BMP180.c.obj
  .data          0x00000000        0x0 CMakeFiles/InertialMeasurementUnit.dir/BMP180/BMP180.c.obj
  .bss           0x00000000        0x0 CMakeFiles/InertialMeasurementUnit.dir/BMP180/BMP180.c.obj
@@ -1418,9 +1416,9 @@ Discarded input sections
                 0x00000000       0x40 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
  .text.async_context_base_needs_servicing
                 0x00000000       0x54 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
- .text          0x00000000        0x0 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccBma7sV.o
- .data          0x00000000        0x0 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccBma7sV.o
- .bss           0x00000000        0x0 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccBma7sV.o
+ .text          0x00000000        0x0 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccnwBKFF.o
+ .data          0x00000000        0x0 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccnwBKFF.o
+ .bss           0x00000000        0x0 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccnwBKFF.o
  .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-calloc.o)
@@ -1673,7 +1671,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
 .boot2          0x10000000      0x100
                 0x10000000                        __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccBma7sV.o
+ .boot2         0x10000000      0x100 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccnwBKFF.o
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -1742,29 +1740,29 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .text.frame_dummy
                 0x100002e4       0x24 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
  .text.startup.main
-                0x10000308      0x18c CMakeFiles/InertialMeasurementUnit.dir/InertialMeasurementUnit.c.obj
+                0x10000308      0x188 CMakeFiles/InertialMeasurementUnit.dir/InertialMeasurementUnit.c.obj
                 0x10000308                main
  .text.i2c_set_up
-                0x10000494       0x38 CMakeFiles/InertialMeasurementUnit.dir/i2c/i2c.c.obj
-                0x10000494                i2c_set_up
+                0x10000490       0x38 CMakeFiles/InertialMeasurementUnit.dir/i2c/i2c.c.obj
+                0x10000490                i2c_set_up
  .text.i2c_set_register
-                0x100004cc       0x24 CMakeFiles/InertialMeasurementUnit.dir/i2c/i2c.c.obj
-                0x100004cc                i2c_set_register
+                0x100004c8       0x24 CMakeFiles/InertialMeasurementUnit.dir/i2c/i2c.c.obj
+                0x100004c8                i2c_set_register
  .text.i2c_scan
-                0x100004f0       0x40 CMakeFiles/InertialMeasurementUnit.dir/i2c/i2c.c.obj
-                0x100004f0                i2c_scan
+                0x100004ec       0x40 CMakeFiles/InertialMeasurementUnit.dir/i2c/i2c.c.obj
+                0x100004ec                i2c_scan
  .text.BMP180SetUp
-                0x10000530      0x110 CMakeFiles/InertialMeasurementUnit.dir/BMP180/BMP180.c.obj
-                0x10000530                BMP180SetUp
+                0x1000052c      0x10c CMakeFiles/InertialMeasurementUnit.dir/BMP180/BMP180.c.obj
+                0x1000052c                BMP180SetUp
  .text.BMPMeasure
-                0x10000640      0x220 CMakeFiles/InertialMeasurementUnit.dir/BMP180/BMP180.c.obj
-                0x10000640                BMPMeasure
+                0x10000638      0x218 CMakeFiles/InertialMeasurementUnit.dir/BMP180/BMP180.c.obj
+                0x10000638                BMPMeasure
  .text.createBarometer
-                0x10000860       0x44 CMakeFiles/InertialMeasurementUnit.dir/Barometer.c.obj
-                0x10000860                createBarometer
+                0x10000850       0x44 CMakeFiles/InertialMeasurementUnit.dir/Barometer.c.obj
+                0x10000850                createBarometer
  .text.getMeasurementsBarometer
-                0x100008a4       0x70 CMakeFiles/InertialMeasurementUnit.dir/Barometer.c.obj
-                0x100008a4                getMeasurementsBarometer
+                0x10000894       0x80 CMakeFiles/InertialMeasurementUnit.dir/Barometer.c.obj
+                0x10000894                getMeasurementsBarometer
  .text.gpio_set_function
                 0x10000914       0x30 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
                 0x10000914                gpio_set_function
@@ -2715,166 +2713,166 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
 .iplt           0x1000bef0        0x0
  .iplt          0x1000bef0        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x1000bef0    0x37f5c
+.rodata         0x1000bef0    0x37f24
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.main.str1.4
-                0x1000bef0      0x644 CMakeFiles/InertialMeasurementUnit.dir/InertialMeasurementUnit.c.obj
-                                 0xe2 (size before relaxing)
+                0x1000bef0      0x60c CMakeFiles/InertialMeasurementUnit.dir/InertialMeasurementUnit.c.obj
+                                 0xaa (size before relaxing)
  .rodata.createBarometer.str1.4
-                0x1000c534       0x1f CMakeFiles/InertialMeasurementUnit.dir/Barometer.c.obj
+                0x1000c4fc       0x1f CMakeFiles/InertialMeasurementUnit.dir/Barometer.c.obj
  .rodata.spin_lock_claim_unused.str1.4
-                0x1000c534       0x1b CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x1000c4fc       0x1b CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .rodata.user_irq_claim_unused.str1.4
-                0x1000c534       0x1b CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000c534        0x4 
+                0x1000c4fc       0x1b CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x1000c4fc        0x4 
  .rodata.at_the_end_of_time
-                0x1000c538        0x8 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/common/pico_time/time.c.obj
-                0x1000c538                at_the_end_of_time
+                0x1000c500        0x8 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000c500                at_the_end_of_time
  .rodata.hardware_alarm_claim.str1.4
-                0x1000c540       0x22 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x1000c508       0x22 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.panic.str1.4
-                0x1000c540       0x12 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x1000c508       0x12 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.hard_assertion_failure.str1.4
-                0x1000c540        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x1000c508        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x1000c540       0x15 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000c508       0x15 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata._vsnprintf
-                0x1000c540      0x19c CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x1000c6dc        0x4 
+                0x1000c508      0x19c CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x1000c6a4        0x4 
  .rodata.pow10.0
-                0x1000c6e0       0x50 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x1000c6a8       0x50 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.missing_double_func_shim.str1.4
-                0x1000c730       0x18 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x1000c6f8       0x18 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.missing_float_func_shim.str1.4
-                0x1000c730        0x1 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x1000c6f8        0x1 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
  .rodata.__wrap_malloc.str1.4
-                0x1000c730        0xe CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+                0x1000c6f8        0xe CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
  .rodata.str1.4
-                0x1000c730       0x50 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000c6f8       0x50 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x1000c730        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000c6f8        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x1000c73c        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000c704        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_56
-                0x1000c748        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000c710        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x1000c754        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x1000c71c        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.0
-                0x1000c760        0x2 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x1000c762        0x2 
+                0x1000c728        0x2 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x1000c72a        0x2 
  .rodata._resetd_driver
-                0x1000c764       0x18 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x1000c72c       0x18 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.str1.4
-                0x1000c77c       0x13 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1000c744       0x13 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.__bi_182.0
-                0x1000c77c        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x1000c744        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x1000c788       0x2a CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1000c750       0x2a CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_str
-                0x1000c788       0x18 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1000c750       0x18 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_cfg
-                0x1000c7a0       0x54 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1000c768       0x54 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x1000c7f4       0x12 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x1000c7bc       0x12 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.str1.4
-                0x1000c806       0x14 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x1000c7ce       0x14 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata.str1.4
-                0x1000c806       0x53 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x1000c806        0x2 
+                0x1000c7ce       0x53 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x1000c7ce        0x2 
  .rodata.tud_task_ext
-                0x1000c808       0x8c CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000c7d0       0x8c CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x1000c894       0x18 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x1000c85c       0x18 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata.cyw43_read_bytes.str1.4
-                0x1000c8ac       0x1a CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+                0x1000c874       0x1a CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
  .rodata.cyw43_write_bytes.str1.4
-                0x1000c8ac        0xd CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+                0x1000c874        0xd CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
  .rodata.spi_gap01_sample0_program
-                0x1000c8ac        0x6 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
- *fill*         0x1000c8b2        0x2 
+                0x1000c874        0x6 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+ *fill*         0x1000c87a        0x2 
  .rodata.spi_gap01_sample0_program_instructions
-                0x1000c8b4        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
+                0x1000c87c        0xc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_bus_pio_spi.c.obj
  .rodata.cyw43_kso_set.str1.4
-                0x1000c8c0       0x23 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1000c888       0x23 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_sdpcm_poll_device.str1.4
-                0x1000c8c0       0x55 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1000c888       0x55 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_sdpcm_send_common.str1.4
-                0x1000c8c0       0x22 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1000c888       0x22 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_do_ioctl.str1.4
-                0x1000c8c0       0x53 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1000c888       0x53 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.reset_device_core.constprop.0.str1.4
-                0x1000c8c0       0x1a CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1000c888       0x1a CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_bus_init.str1.4
-                0x1000c8c0       0xfe CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1000c888       0xfe CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_ll_gpio_set.str1.4
-                0x1000c8c0        0x8 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1000c888        0x8 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.w43439A0_7_95_49_00_combined
-                0x1000c8c0    0x36fd8 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x1000c888    0x36fd8 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.wifi_nvram_4343
-                0x10043898      0x2e7 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
- *fill*         0x10043b7f        0x1 
- .rodata        0x10043b80       0x72 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+                0x10043860      0x2e7 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
+ *fill*         0x10043b47        0x1 
+ .rodata        0x10043b48       0x72 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ll.c.obj
  .rodata.cyw43_cb_process_async_event.str1.4
-                0x10043bf2       0x28 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
- *fill*         0x10043bf2        0x2 
+                0x10043bba       0x28 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+ *fill*         0x10043bba        0x2 
  .rodata.cyw43_cb_process_async_event
-                0x10043bf4       0xbc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+                0x10043bbc       0xbc CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
  .rodata.str1.4
-                0x10043cb0       0x9e CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+                0x10043c78       0x9e CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
  .rodata.cyw43_async_event_name_table
-                0x10043cb0      0x164 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
+                0x10043c78      0x164 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c.obj
  .rodata.pio_claim_unused_sm.str1.4
-                0x10043e14       0x24 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10043ddc       0x24 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
  .rodata.pio_add_program.str1.4
-                0x10043e14       0x11 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+                0x10043ddc       0x11 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
  .rodata.dma_claim_unused_channel.str1.4
-                0x10043e14       0x1e CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+                0x10043ddc       0x1e CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
  .rodata.cyw43_cb_tcpip_set_link_up.str1.4
-                0x10043e14       0x20 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj
+                0x10043ddc       0x20 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj
  .rodata.async_context_threadsafe_background_lock_check.str1.4
-                0x10043e14       0x20 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
+                0x10043ddc       0x20 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
  .rodata.template
-                0x10043e14       0x38 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
-                0x10043e4c                        . = ALIGN (0x4)
+                0x10043ddc       0x38 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
+                0x10043e14                        . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10043e4c                        . = ALIGN (0x4)
+                0x10043e14                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10043e4c                        __exidx_start = .
+                0x10043e14                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10043e4c                        __exidx_end = .
-                0x10043e4c                        . = ALIGN (0x4)
-                0x10043e4c                        __binary_info_start = .
+                0x10043e14                        __exidx_end = .
+                0x10043e14                        . = ALIGN (0x4)
+                0x10043e14                        __binary_info_start = .
 
-.binary_info    0x10043e4c       0x24
+.binary_info    0x10043e14       0x24
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr81
-                0x10043e4c        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10043e14        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x10043e50        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10043e18        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr56
-                0x10043e54        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10043e1c        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x10043e58        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10043e20        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x10043e5c        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10043e24        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x10043e60        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10043e28        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x10043e64        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10043e2c        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr22
-                0x10043e68        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10043e30        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr182
-                0x10043e6c        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x10043e70                        __binary_info_end = .
+                0x10043e34        0x4 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x10043e38                        __binary_info_end = .
 
-.rel.dyn        0x10043e70        0x0
- .rel.iplt      0x10043e70        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10043e70                        . = ALIGN (0x4)
+.rel.dyn        0x10043e38        0x0
+ .rel.iplt      0x10043e38        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10043e38                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2883,7 +2881,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
                 0x20000000       0xc0 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0     0x1528 load address 0x10043e70
+.data           0x200000c0     0x1528 load address 0x10043e38
                 0x200000c0                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -3054,36 +3052,36 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  *(.jcr)
                 0x200015e8                        . = ALIGN (0x4)
                 0x200015e8                        __data_end__ = .
-                0x10043e70                        __etext = LOADADDR (.data)
+                0x10043e38                        __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x200015e8        0x0 load address 0x10045398
+                0x200015e8        0x0 load address 0x10045360
  .tm_clone_table
                 0x200015e8        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x200015e8        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x200015e8        0x0 load address 0x10045398
+.igot.plt       0x200015e8        0x0 load address 0x10045360
  .igot.plt      0x200015e8        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x200015e8        0x0 load address 0x10045398
+                0x200015e8        0x0 load address 0x10045360
                 0x200015e8                        . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10045398
+.scratch_x      0x20040000        0x0 load address 0x10045360
                 0x20040000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                        . = ALIGN (0x4)
                 0x20040000                        __scratch_x_end__ = .
-                0x10045398                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10045360                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10045398
+.scratch_y      0x20041000        0x0 load address 0x10045360
                 0x20041000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                        . = ALIGN (0x4)
                 0x20041000                        __scratch_y_end__ = .
-                0x10045398                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10045360                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x200015e8     0x187c
                 0x200015e8                        . = ALIGN (0x4)
@@ -3250,8 +3248,8 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10045398        0x0
-                0x10045398                        PROVIDE (__flash_binary_end = .)
+.flash_end      0x10045360        0x0
+                0x10045360                        PROVIDE (__flash_binary_end = .)
                 0x20040000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -3350,7 +3348,7 @@ LOAD CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/
 LOAD CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_cyw43_driver/cyw43_driver.c.obj
 LOAD CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_async_context/async_context_threadsafe_background.c.obj
 LOAD CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
-LOAD /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccBma7sV.o
+LOAD /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccnwBKFF.o
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -3496,7 +3494,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000a40       0x2c CMakeFiles/InertialMeasurementUnit.dir/Users/alexandruchiriac/src/pico-sdk/src/rp2_common/pico_async_context/async_context_base.c.obj
  .ARM.attributes
-                0x00000a6c       0x22 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccBma7sV.o
+                0x00000a6c       0x22 /var/folders/qp/lspnqq_n48s5vw9q2m3d_7200000gn/T//ccnwBKFF.o
  .ARM.attributes
                 0x00000a8e       0x1e /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes

@@ -4,11 +4,11 @@
 #include "BMP180/BMP180_API.h"
 
 struct barometer_s {
-    i2c_dev_rw_t device;
+    i2c_dev_t device;
     struct BMP180 *bmp180;
 };
 
-Barometer createBarometer(i2c_dev_rw_t device) {
+Barometer createBarometer(i2c_dev_t device) {
     struct barometer_s *barometer = malloc(sizeof(struct barometer_s));
     barometer->device = device;
     if (!(barometer->bmp180 = BMP180SetUp(device))) {
@@ -22,8 +22,8 @@ Barometer createBarometer(i2c_dev_rw_t device) {
 void getMeasurementsBarometer(Barometer barometer, double *pressure, double *temperature) {
     long T, p;
     BMPMeasure(((struct barometer_s*)barometer)->device, *((struct barometer_s*)barometer)->bmp180, 3, &T, &p);
-    *pressure = p;
-    *temperature = 0.1 * T;
+    *pressure = (double)p;
+    *temperature = 0.1 * T + 273.15;
 }
 
 void destroyBarometer(Barometer *barometer) {

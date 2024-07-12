@@ -5,7 +5,7 @@
 
 typedef void* Barometer;
 
-Barometer createBarometer(i2c_dev_rw_t device);
+Barometer createBarometer(i2c_dev_t device);
 void getMeasurementsBarometer(Barometer barometer, double *pressure, double *temperature);
 void destroyBarometer(Barometer *barometer);
 

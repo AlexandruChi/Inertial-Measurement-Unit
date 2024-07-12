@@ -45,7 +45,7 @@ int main() {
     }
 
     //i2c_dev_t mpu6500 = {PICO_DEFAULT_I2C_INSTANCE, MPU_ADDRESS};
-    i2c_dev_rw_t bmp180 = {PICO_DEFAULT_I2C_INSTANCE, BMP180_ADDRESS_READ, BMP180_ADDRESS_WRITE};
+    i2c_dev_t bmp180 = {PICO_DEFAULT_I2C_INSTANCE, BMP180_ADDRESS};
 
     //mpuStart(mpu6500);
 
@@ -61,10 +61,7 @@ int main() {
     }
     printf("\n");
 
-
-    printf("Create barometer\n");
     Barometer barometer = createBarometer(bmp180);
-    printf("Finish creating barometer\n");
 
     /*
     mpuCalibrate(mpu6500);
@@ -99,13 +96,10 @@ int main() {
     loop {
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 1);
 
-        printf("Measure data\n");
         getMeasurementsBarometer(barometer, &pressure, &temperature);
-
-        printf("Calculate altitude\n");
         altitude = getAltitude(pressure);
 
-        printf("bmp => a: %7.2lf\\tp: %7.2lf\\tt: %7.2lf\\n\n", altitude, pressure, temperature);
+        printf("bmp => a: %7.2lfm   p: %7.2lfPa   %7.2lfatm   t: %7.2lfK   %7.2lfdC\n\n", altitude, pressure, atm(pressure), temperature, dC(temperature));
 
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
         sleep_ms(1000);
@@ -113,7 +107,7 @@ int main() {
 }
 
 double getAltitude(double p) {
-    return 44330 * (1 - pow((p / p0), 0.00019029495));
+    return 44330.0 * (1 - pow((p / p0), 0.1902949572));
 }
 
 void mpuStart(i2c_dev_t device) {

@@ -17,8 +17,8 @@ struct BMP180 {
     short MD;
 };
 
-struct BMP180 *BMP180SetUp(i2c_dev_rw_t device);
-bool BMPMeasure(i2c_dev_rw_t device, struct BMP180 calibration, uint8_t oversampling, long *T, long *p);
+struct BMP180 *BMP180SetUp(i2c_dev_t device);
+bool BMPMeasure(i2c_dev_t device, struct BMP180 calibration, uint8_t oversampling, long *T, long *p);
 void BMP180Clear(struct BMP180 **calibration);
 
 #endif /* BMP180_API_H */
