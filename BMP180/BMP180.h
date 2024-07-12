@@ -4,9 +4,13 @@
 #ifndef BMP180_H
 #define BMP180_H
 
-#define BMP180_ADDRESS
+#define BMP180_ADDRESS_READ  0xFF
+#define BMP180_ADDRESS_WRITE 0xFE
 
 /* https://cdn-shop.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf */
+
+#define TemperatureMeasurement 0x2E
+#define PressureMeasurement(oss) (0x43 + ((oss) << 6))
 
 /* Data registers */
 #define out_xlsb 248
@@ -18,7 +22,7 @@
 #define softReset 224
 
 /* Fixed */
-#define id 208
+#define id_r 208
 
 /* Calibration registers */
 #define calib21 191

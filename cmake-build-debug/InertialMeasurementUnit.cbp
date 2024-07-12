@@ -411,7 +411,19 @@
 		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/AK8963/AK8963.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/BMP180/BMP180.c">
+			<Option target="InertialMeasurementUnit"/>
+		</Unit>
 		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/BMP180/BMP180.h">
+			<Option target="InertialMeasurementUnit"/>
+		</Unit>
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/BMP180/BMP180_API.h">
+			<Option target="InertialMeasurementUnit"/>
+		</Unit>
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/Barometer.c">
+			<Option target="InertialMeasurementUnit"/>
+		</Unit>
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/Barometer.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
 		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/InertialMeasurementUnit.c">
@@ -423,10 +435,10 @@
 		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/MPU/MPU6500.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/i2c.c">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/i2c/i2c.c">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/i2c.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/i2c/i2c.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
 		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/units.h">

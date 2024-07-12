@@ -3,6 +3,11 @@
 
 /* MPU6500 */
 
+/* For definitions with the same name:
+ * _r -> register
+ * _b -> bit
+ */
+
 #ifndef MPU_H
 #define MPU_H
 
@@ -11,6 +16,8 @@
 
 #define SAMPLING_RATE_GYROSCOPE_DEFAULT 8000
 #define SAMPLING_RATE_ACCELEROMETER_DEFAULT 1000
+
+#define FIFO_SIZE 512
 
 // convert g to lsb
 #define scale_2g_lsb 16384
@@ -95,7 +102,7 @@
 #define WOM_THR 31
 
 /* FIFO Enable */
-#define FIFO_EN 35
+#define FIFO_EN_r 35
 
 #define TEMP_OUT 7
 #define GYRO_XOUT 6
@@ -224,6 +231,15 @@
 
 /*  User Control */
 #define USER_CTRL 106
+
+#define DMP_EN 7
+#define FIFO_EN_b 6
+#define I2C_MST_EN 5
+#define I2C_IF_DIS 4
+#define DMP_RST 3
+#define FIFO_RST 2
+#define I2C_MST_RST 1
+#define SIG_COND_RST 0
 
 /* Power Management 1 */
 #define PWR_MGMT_1 107

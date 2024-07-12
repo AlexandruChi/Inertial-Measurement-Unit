@@ -31,6 +31,16 @@ bool i2c_read_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t *val)
     return true;
 }
 
+bool i2c_rw_read_register(i2c_inst_t *i2c, uint8_t addr_r, uint8_t addr_w, uint8_t reg, uint8_t *val) {
+    if (
+            i2c_write_blocking(i2c, addr_w, &reg, 1, true) == PICO_ERROR_GENERIC ||
+            i2c_read_blocking(i2c, addr_r, val, 1, false) == PICO_ERROR_GENERIC
+            ) {
+        return false;
+    }
+    return true;
+}
+
 uint i2c_scan(i2c_inst_t *i2c, uint8_t *addr) {
     uint8_t i = 0, val;
 
