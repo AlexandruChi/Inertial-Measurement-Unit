@@ -3,9 +3,8 @@
 #include "pico/stdlib.h"
 #include "pico/cyw43_arch.h"
 
-#include "MPU/MPU6500.h"
-#include "BMP180/BMP180.h"
-#include "AK8963/AK8963.h"
+#include "MPU/MPU6500_Reg.h"
+#include "src/BMP180/BMP180_Reg.h"
 
 #include "units.h"
 #include "Barometer.h"
@@ -103,7 +102,7 @@ int main() {
 
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, 0);
         sleep_ms(1000);
-    };
+    }
 }
 
 double getAltitude(double p) {

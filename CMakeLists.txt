@@ -25,20 +25,17 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(InertialMeasurementUnit InertialMeasurementUnit.c
-        MPU/MPU6050.h
-        MPU/MPU6500.h
-        MPU/MPU6500.h
-        AK8963/AK8963.h
-        BMP180/BMP180.h
-        BMP180/BMP180.h
-        i2c/i2c.h
-        i2c/i2c.c
-        units.h
-        Barometer.h
-        BMP180/BMP180.c
-        Barometer.c
-        BMP180/BMP180_API.h
+add_executable(InertialMeasurementUnit src/InertialMeasurementUnit.c
+        src/MPU/MPU6050_Reg.h
+        src/MPU/MPU6500_Reg.h
+        src/BMP180/BMP180_Reg.h
+        src/i2c/i2c.h
+        src/i2c/i2c.c
+        src/units.h
+        src/Barometer.h
+        src/BMP180/BMP180.c
+        src/Barometer.c
+        src/BMP180/BMP180.h
 )
 
 pico_set_program_name(InertialMeasurementUnit "InertialMeasurementUnit")

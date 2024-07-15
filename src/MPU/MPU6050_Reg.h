@@ -2,8 +2,8 @@
 #pragma ide diagnostic ignored "OCUnusedMacroInspection"
 
 /* MPU */
-#ifndef MPU_H
-#define MPU_H
+#ifndef MPU6050_Reg_H
+#define MPU6050_Reg_H
 
 #define MPU_ADDRESS     0x68 /* INT = GND */
 #define MPU_ADDRESS_2   0x69 /* INT = VDD */
@@ -179,6 +179,6 @@
 /* Who Am I */
 #define WHO_AM_I 117
 
-#endif /* MPU_H */
+#endif /* MPU6050_Reg_H */
 
 #pragma clang diagnostic pop

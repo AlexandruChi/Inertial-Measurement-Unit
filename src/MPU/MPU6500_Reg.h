@@ -8,8 +8,8 @@
  * _b -> bit
  */
 
-#ifndef MPU_H
-#define MPU_H
+#ifndef MPU6500_Reg_H
+#define MPU6500_Reg_H
 
 #define MPU_ADDRESS     0x68 /* INT = GND */
 #define MPU_ADDRESS_2   0x69 /* INT = VDD */
@@ -279,6 +279,6 @@
 #define ZA_OFFSET_H 125
 #define ZA_OFFSET_L 126
 
-#endif /* MPU_H */
+#endif /* MPU6500_Reg_H */
 
 #pragma clang diagnostic pop

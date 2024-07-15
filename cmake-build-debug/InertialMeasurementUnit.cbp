@@ -408,40 +408,37 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/AK8963/AK8963.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/BMP180/BMP180.c">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/BMP180/BMP180.c">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/BMP180/BMP180.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/BMP180/BMP180.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/BMP180/BMP180_Reg.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/BMP180/BMP180_API.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/Barometer.c">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/Barometer.c">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/Barometer.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/Barometer.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/InertialMeasurementUnit.c">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/InertialMeasurementUnit.c">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/MPU/MPU6050_Reg.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/MPU/MPU6050.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/MPU/MPU6500_Reg.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/MPU/MPU6500.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/i2c/i2c.c">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/i2c/i2c.c">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/i2c/i2c.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/i2c/i2c.h">
-			<Option target="InertialMeasurementUnit"/>
-		</Unit>
-		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/units.h">
+		<Unit filename="/Users/alexandruchiriac/src/Inertial-Measurement-Unit/src/units.h">
 			<Option target="InertialMeasurementUnit"/>
 		</Unit>
 		<Unit filename="/Users/alexandruchiriac/src/pico-sdk/lib/cyw43-driver/src/cyw43_ctrl.c">

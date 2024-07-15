@@ -1,7 +1,7 @@
-#ifndef BMP180_API_H
-#define BMP180_API_H
+#ifndef BMP180_H
+#define BMP180_H
 
-#include "i2c/i2c.h"
+#include "src/i2c/i2c.h"
 
 struct BMP180 {
     short AC1;
@@ -18,7 +18,7 @@ struct BMP180 {
 };
 
 struct BMP180 *BMP180SetUp(i2c_dev_t device);
-bool BMPMeasure(i2c_dev_t device, struct BMP180 calibration, uint8_t oversampling, long *T, long *p);
+bool BMP180Measure(i2c_dev_t device, struct BMP180 calibration, uint8_t oversampling, long *T, long *p);
 void BMP180Clear(struct BMP180 **calibration);
 
-#endif /* BMP180_API_H */
+#endif /* BMP180_H */

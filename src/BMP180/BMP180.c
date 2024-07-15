@@ -1,5 +1,5 @@
+#include "BMP180_Reg.h"
 #include "BMP180.h"
-#include "BMP180_API.h"
 
 #include <malloc.h>
 
@@ -22,7 +22,7 @@ struct BMP180 *BMP180SetUp(i2c_dev_t device) {
     return (struct BMP180*)calibration;
 }
 
-bool BMPMeasure(i2c_dev_t device, struct BMP180 calibration, uint8_t oversampling, long *T, long *p) {
+bool BMP180Measure(i2c_dev_t device, struct BMP180 calibration, uint8_t oversampling, long *T, long *p) {
     const uint16_t waitTime[4] = {4500, 7500, 13500, 25500};
 
     if (oversampling > 3) {

@@ -1,8 +1,8 @@
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "OCUnusedMacroInspection"
 
-#ifndef BMP180_H
-#define BMP180_H
+#ifndef BMP180_Reg_H
+#define BMP180_Reg_H
 
 #define BMP180_ADDRESS  0x77
 
@@ -47,6 +47,6 @@
 #define calib1 171
 #define calib0 170
 
-#endif /* BMP180_H */
+#endif /* BMP180_Reg_H */
 
 #pragma clang diagnostic pop
