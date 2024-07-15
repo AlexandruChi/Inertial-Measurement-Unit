@@ -4,11 +4,8 @@
 #include <malloc.h>
 
 struct BMP180 *BMP180SetUp(i2c_dev_t device) {
-    uint8_t reg = calib0;
-    i2c_write_blocking(device.i2c, device.addr, &reg, 1, true);
-
     uint8_t data[22];
-    i2c_read_blocking(device.i2c, device.addr, data, 22, false);
+    i2c_read_register_n(device.i2c, device.addr, calib0, data, 22);
 
     uint16_t *calibration = malloc(sizeof(struct BMP180));
     for (uint8_t i = 0; i < 11; i++) {
@@ -29,26 +26,23 @@ bool BMP180Measure(i2c_dev_t device, struct BMP180 calibration, uint8_t oversamp
         return false;
     }
 
-    /* read uncompensated temperature value */
-
-    i2c_set_register(device.i2c, device.addr, ctrl_meas, TemperatureMeasurement);
-    sleep_us(4500);
-
-    uint8_t reg = out_msb;
     uint8_t data[3];
 
-    i2c_write_blocking(device.i2c, device.addr, &reg, 1, true);
-    i2c_read_blocking(device.i2c, device.addr, data, 2, false);
+    /* read uncompensated temperature value */
+
+    i2c_write_register(device.i2c, device.addr, ctrl_meas, TemperatureMeasurement);
+    sleep_us(4500);
+
+    i2c_read_register_n(device.i2c, device.addr, out_msb, data, 2);
 
     long UT = ((uint16_t)data[0] << 8) + data[1];
 
     /* Read uncompensated pressure value */
 
-    i2c_set_register(device.i2c, device.addr, ctrl_meas, PressureMeasurement(oversampling));
+    i2c_write_register(device.i2c, device.addr, ctrl_meas, PressureMeasurement(oversampling));
     sleep_us(waitTime[oversampling]);
 
-    i2c_write_blocking(device.i2c, device.addr, &reg, 1, true);
-    i2c_read_blocking(device.i2c, device.addr, data, 3, false);
+    i2c_read_register_n(device.i2c, device.addr, out_msb, data, 2);
 
     long UP = (long)((((uint32_t)data[0] << 16) + ((uint16_t)data[1] << 8) + data[2]) >> (8 - oversampling));
 

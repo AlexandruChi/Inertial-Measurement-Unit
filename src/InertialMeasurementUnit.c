@@ -6,7 +6,6 @@
 #include "MPU/MPU6500_Reg.h"
 #include "src/BMP180/BMP180_Reg.h"
 
-#include "units.h"
 #include "Barometer.h"
 
 #pragma clang diagnostic push
@@ -15,8 +14,6 @@
 #define loop while(1)
 
 #define BAUDRATE kHz(400)
-
-#define p0 hPa(1013.25)
 
 void mpuStart(i2c_dev_t device);
 void mpuCalibrate(i2c_dev_t device);
@@ -112,13 +109,13 @@ double getAltitude(double p) {
 void mpuStart(i2c_dev_t device) {
     /* Reset device
      * DEVICE_RESET = 1 */
-    i2c_set_register(device.i2c, device.addr, PWR_MGMT_1, 1 << H_RESET);
+    i2c_write_register(device.i2c, device.addr, PWR_MGMT_1, 1 << H_RESET);
     sleep_ms(100);
 
     /* Wake up device and disable temperature
      * SLEEP = 0
      * PD_PTAT = 1 */
-    i2c_set_register(device.i2c, device.addr, PWR_MGMT_1, 1 << PD_PTAT);
+    i2c_write_register(device.i2c, device.addr, PWR_MGMT_1, 1 << PD_PTAT);
 }
 
 void mpuCalibrate(i2c_dev_t device) {
@@ -163,7 +160,7 @@ void mpuConfigFIFO(i2c_dev_t device, bool gyro, bool accel) {
 
     mpuResetFIFO(device);
 
-    i2c_set_register(device.i2c, device.addr, FIFO_EN_r, config);
+    i2c_write_register(device.i2c, device.addr, FIFO_EN_r, config);
 }
 
 void mpuResetFIFO(i2c_dev_t device) {
@@ -171,7 +168,7 @@ void mpuResetFIFO(i2c_dev_t device) {
     i2c_read_register(device.i2c, device.addr, USER_CTRL, &val);
 
     val |= 1 << FIFO_RST;
-    i2c_set_register(device.i2c, device.addr, USER_CTRL, val);
+    i2c_write_register(device.i2c, device.addr, USER_CTRL, val);
 }
 
 void mpuCurrentData(i2c_dev_t device, void *data) {

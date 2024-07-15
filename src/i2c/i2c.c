@@ -1,5 +1,6 @@
 #include "i2c.h"
 #include <hardware/gpio.h>
+#include <string.h>
 
 uint i2c_set_up(i2c_inst_t *i2c, uint scl, uint sda, uint baudrate) {
     uint realBaudrate = i2c_init(i2c, baudrate);
@@ -13,7 +14,7 @@ uint i2c_set_up(i2c_inst_t *i2c, uint scl, uint sda, uint baudrate) {
     return realBaudrate;
 }
 
-bool i2c_set_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t val) {
+bool i2c_write_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t val) {
     uint8_t buffer[2] = {reg, val};
     if (i2c_write_blocking(i2c, addr, buffer, 2, false) == PICO_ERROR_GENERIC) {
         return false;
@@ -28,6 +29,37 @@ bool i2c_read_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t *val)
     ) {
         return false;
     }
+    return true;
+}
+
+bool i2c_write_register_n(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t *val, size_t size) {
+    if (!size || !val) {
+        return false;
+    }
+
+    uint8_t buffer[size + 1];
+    buffer[0] = reg;
+    memcpy(buffer + 1, val, size);
+
+    if (i2c_write_blocking(i2c, addr, buffer, size + 1, false) == PICO_ERROR_GENERIC) {
+        return false;
+    }
+
+    return true;
+}
+
+bool i2c_read_register_n(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t *val, size_t size) {
+    if (!size || !val) {
+        return false;
+    }
+
+    if (
+            i2c_write_blocking(i2c, addr, &reg, 1, true) == PICO_ERROR_GENERIC ||
+            i2c_read_blocking(i2c, addr, val, size, false) == PICO_ERROR_GENERIC
+    ) {
+        return false;
+    }
+
     return true;
 }
 

@@ -1,5 +1,4 @@
 #include <malloc.h>
-#include <pico/printf.h>
 #include "Barometer.h"
 #include "BMP180/BMP180.h"
 
@@ -18,7 +17,7 @@ __attribute__((unused)) Barometer createBarometer(i2c_dev_t device) {
     return barometer;
 }
 
-__attribute__((unused)) void getMeasurementsBarometer(Barometer barometer, double *pressure, double *temperature) {
+__attribute__((unused)) bool getMeasurementsBarometer(Barometer barometer, double *pressure, double *temperature) {
     long T, p;
     BMP180Measure(((struct barometer_s *) barometer)->device, *((struct barometer_s *) barometer)->bmp180, 3, &T, &p);
     *pressure = (double)p;

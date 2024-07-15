@@ -10,7 +10,9 @@ typedef struct i2c_dev {
 
 uint i2c_set_up(i2c_inst_t *i2c, uint scl, uint sda, uint baudrate);
 uint i2c_scan(i2c_inst_t *i2c, uint8_t *addr);
-bool i2c_set_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t val);
+bool i2c_write_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t val);
 bool i2c_read_register(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t *val);
+bool i2c_write_register_n(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t *val, size_t size);
+bool i2c_read_register_n(i2c_inst_t *i2c, uint8_t addr, uint8_t reg, uint8_t *val, size_t size);
 
 #endif /* I2C_H */
